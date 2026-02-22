@@ -29,15 +29,15 @@ body {
 }
 
 /* ===== AVATAR ===== */
-.container img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid #ffb6c1;
-  margin-bottom: 20px;
+.container {
+  background: #ffffff;
+  width: 92%;
+  max-width: 520px;   /* 👈 RỘNG HƠN */
+  padding: 50px 45px; /* 👈 VIỀN TRẮNG DÀY HƠN */
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
 }
-
 /* ===== TIÊU ĐỀ ===== */
 .container h1 {
   font-size: 26px;
