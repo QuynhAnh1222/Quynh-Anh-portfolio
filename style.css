@@ -5,78 +5,104 @@
   box-sizing: border-box;
 }
 
-/* Font đẹp hơn */
+/* Background tổng thể */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #5f2c82, #49a09d); /* giữ màu bạn đang dùng */
+  background: #e8dfcf; /* giữ màu nền bạn đang dùng */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Wrapper căn giữa */
-.wrapper {
-  width: 100%;
-  max-width: 1100px;
+/* Container chính */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 25px;
   display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: stretch;
-  padding: 40px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  position: relative;
 }
 
-/* Hai bên box */
+/* Hai bên */
 .left,
 .right {
   flex: 1;
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  padding: 0 40px;
+}
+
+/* Divider hồng */
+.divider {
+  width: 2px;
+  background: #f08ab1;
+  margin: 0 10px;
+}
+
+/* Ảnh đại diện */
+.left img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 25px;
+  border: 6px solid #f5f5f5;
+}
+
+/* Tên */
+.left h1 {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Tiêu đề */
-h1, h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 600;
-  color: #333;
+  font-size: 28px;
 }
 
-/* Đoạn text */
-p {
-  color: #555;
+/* Mô tả nhỏ */
+.left p {
+  text-align: center;
+  color: #666;
   margin-bottom: 20px;
-  line-height: 1.6;
 }
 
-/* Input */
-input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-/* Button */
-button {
-  padding: 12px;
+/* Nút */
+.left button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  border-radius: 30px;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  background: #f08ab1;
   color: white;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
 }
 
-button:hover {
+.left button:hover {
   opacity: 0.9;
-  transform: translateY(-2px);
+}
+
+/* Phần nội dung phải */
+.right h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+.right p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.right ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.right li {
+  margin-bottom: 8px;
 }
