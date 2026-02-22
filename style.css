@@ -1,118 +1,91 @@
-/* RESET */
+/* ===== RESET CƠ BẢN ===== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* BODY */
+/* ===== BODY ===== */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #fde2e4;          /* hồng pastel */
-  color: #333;
-  line-height: 1.7;
-}
-
-/* CONTAINER */
-.container {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #fff0f6, #ffe4ec);
+  min-height: 100vh;
   display: flex;
-  max-width: 1100px;
-  margin: 60px auto;
-  background: #fffafa;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  color: #444;
 }
 
-/* CỘT TRÁI */
-.left {
-  width: 35%;
-  background: linear-gradient(180deg, #fbcfe8, #fdf2f8);
+/* ===== CARD CHÍNH ===== */
+.container {
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
   padding: 40px 30px;
+  border-radius: 24px;
   text-align: center;
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
+  animation: fadeUp 1s ease;
 }
 
-/* AVATAR */
-.avatar {
-  width: 160px;
-  height: 160px;
+/* ===== AVATAR ===== */
+.container img {
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid white;
+  border: 6px solid #ffb6c1;
   margin-bottom: 20px;
 }
 
-/* TÊN */
-.left h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+/* ===== TIÊU ĐỀ ===== */
+.container h1 {
+  font-size: 26px;
+  color: #ff69b4;
+  margin-bottom: 8px;
 }
 
-/* SUBTITLE */
-.subtitle {
+/* ===== SUBTITLE ===== */
+.container .subtitle {
   font-size: 15px;
+  color: #ff9acb;
+  margin-bottom: 20px;
+}
+
+/* ===== ĐOẠN GIỚI THIỆU ===== */
+.container p {
+  font-size: 15px;
+  line-height: 1.7;
   color: #555;
   margin-bottom: 25px;
 }
 
-/* BUTTON */
-.btn {
+/* ===== NÚT LINK ===== */
+.button {
   display: inline-block;
-  padding: 10px 20px;
-  background: #ec4899;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #ff85c1, #ff69b4);
   color: white;
+  border-radius: 999px;
   text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.btn:hover {
-  background: #be185d;
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
 }
 
-/* ICONS */
-.icons {
-  margin-top: 25px;
-}
-
-.icons a {
-  font-size: 22px;
-  margin: 0 8px;
-  text-decoration: none;
-}
-
-/* CỘT PHẢI */
-.right {
-  width: 65%;
-  padding: 40px;
-}
-
-/* SECTION */
-section {
-  background: white;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* HEADINGS */
-h2 {
-  color: #be185d;
-  margin-bottom: 12px;
-}
-
-h3 {
-  color: #9d174d;
-  margin-bottom: 10px;
-}
-
-/* LIST */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
