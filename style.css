@@ -1,123 +1,82 @@
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Font đẹp hơn */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f8d7e3, #fbeff3);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #5f2c82, #49a09d); /* giữ màu bạn đang dùng */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* WRAPPER */
+/* Wrapper căn giữa */
 .wrapper {
-    width: 1100px;
-    display: flex;
-    gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 40px;
 }
 
-/* CARD STYLE */
-.card {
-    background: white;
-    border-radius: 25px;
-    padding: 50px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+/* Hai bên box */
+.left,
+.right {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* LEFT */
-.left-card {
-    width: 40%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Tiêu đề */
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
 }
 
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    border: 5px solid #ff6b9e;
-}
-
-h1 {
-    font-size: 28px;
-    color: #ff4f8b;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #666;
-    margin-bottom: 25px;
-    line-height: 1.6;
-}
-
-.btn {
-    padding: 12px 30px;
-    background: #ff4f8b;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e63e77;
-    transform: translateY(-3px);
-}
-
-/* RIGHT */
-.right-card {
-    width: 60%;
-}
-
-section {
-    margin-bottom: 35px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #444;
-}
-
+/* Đoạn text */
 p {
-    color: #555;
-    line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-ul {
-    padding-left: 20px;
+/* Input */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
 }
 
-li {
-    margin-bottom: 8px;
-    color: #555;
+/* Button */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 1000px) {
-    .wrapper {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .left-card,
-    .right-card {
-        width: 100%;
-    }
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
