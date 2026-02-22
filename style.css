@@ -1,87 +1,98 @@
-/* NỀN TỔNG */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #ffe4ec, #fff);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8d7e3, #fbeff3);
+    color: #333;
 }
 
-/* KHUNG CHÍNH */
-.page {
-  background: #fff;
-  width: 90%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(255, 105, 180, 0.25);
+/* CONTAINER */
+.container {
+    display: flex;
+    min-height: 100vh;
 }
 
-/* CỘT TRÁI */
+/* LEFT SIDE */
 .left {
-  background: linear-gradient(180deg, #ffb6c1, #ffd6e0);
-  padding: 50px 35px;
-  text-align: center;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 80%;
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.left h1 {
-  margin: 10px 0 5px;
+.title {
+    margin: 10px 0 20px;
+    color: #777;
 }
 
-.subtitle {
-  font-size: 15px;
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
-
+/* BUTTON */
 .btn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: white;
-  color: #ff4d88;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff6b9e;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
-/* CỘT PHẢI */
+.btn:hover {
+    background: #ff3d7f;
+    transform: translateY(-3px);
+}
+
+/* RIGHT SIDE */
 .right {
-  padding: 50px;
+    width: 60%;
+    padding: 60px;
 }
 
 section {
-  margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
-h2, h3 {
-  color: #ff4d88;
+h1 {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-p, li {
-  line-height: 1.8;
-  color: #444;
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .page {
-    grid-template-columns: 1fr;
-  }
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-  .right {
-    padding: 35px;
-  }
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
 }
