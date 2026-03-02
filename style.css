@@ -25,38 +25,128 @@ body {
 
 /* ===== CONTAINER ===== */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 60px auto;
   background: var(--bg-white);
-  padding: 55px 65px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(224, 87, 134, 0.18);
+  padding: 60px 70px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(224, 87, 134, 0.18);
 }
 
-/* ===== HEADER ===== */
-header {
-  margin-bottom: 35px;
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
 }
 
-h1 {
+.hero-text h1 {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 46px;
   color: var(--pink-dark);
-  margin-bottom: 8px;
 }
 
 .subtitle {
   font-size: 18px;
   color: var(--text-light);
+  margin-top: 6px;
 }
 
 .links {
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 .links a {
-  margin-right: 20px;
+  margin-right: 18px;
   font-weight: 500;
+}
+
+/* ===== AVATAR ===== */
+.hero-avatar img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--pink-soft);
+  box-shadow: 0 12px 30px rgba(224, 87, 134, 0.25);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== CARD SECTION ===== */
+.card {
+  margin-top: 45px;
+  padding: 30px 35px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(224, 87, 134, 0.18);
+}
+
+.card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  color: var(--pink-dark);
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-left: 6px solid var(--pink-main);
+}
+
+/* ===== TAGS ===== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tags span {
+  background: var(--pink-soft);
+  color: var(--pink-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===== PROJECTS ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: var(--pink-soft);
+  padding: 22px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  color: var(--pink-dark);
+  margin-bottom: 8px;
+}
+
+.project-tags {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-light);
 }
 
 /* ===== LINK ===== */
@@ -69,46 +159,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== SECTION ===== */
-section {
-  margin-top: 40px;
-}
-
-section h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  color: var(--pink-dark);
-  margin-bottom: 18px;
-  padding-left: 14px;
-  border-left: 6px solid var(--pink-main);
-}
-
-/* ===== TEXT ===== */
-p {
-  margin-bottom: 15px;
-}
-
-/* ===== LIST ===== */
-ul {
-  padding-left: 22px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* ===== PROJECT ===== */
-.project {
-  margin-bottom: 18px;
-}
-
-.project strong {
-  color: var(--pink-dark);
-}
-
 /* ===== FOOTER ===== */
 footer {
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
   font-size: 14px;
   color: var(--text-light);
@@ -116,16 +169,17 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
   .container {
-    padding: 35px 25px;
+    padding: 40px 25px;
     margin: 30px 15px;
   }
 
-  h1 {
-    font-size: 32px;
-  }
-
-  section h2 {
-    font-size: 22px;
+  .hero-text h1 {
+    font-size: 34px;
   }
 }
