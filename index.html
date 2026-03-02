@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -15,22 +15,29 @@
 <body>
   <div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <h1>Quỳnh Anh</h1>
-      <div class="subtitle">
-        Nhà nghiên cứu Kinh tế · Phân tích Dữ liệu
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Quỳnh Anh</h1>
+        <div class="subtitle">
+          Nhà nghiên cứu Kinh tế · Phân tích Dữ liệu
+        </div>
+
+        <div class="links">
+          <a href="cv.pdf">📄 Tải CV</a>
+          <a href="mailto:yourmail@email.com">✉️ Email</a>
+          <a href="https://github.com/quynhanh1222" target="_blank">💻 GitHub</a>
+        </div>
       </div>
 
-      <div class="links">
-        <a href="cv.pdf">📄 Tải CV</a>
-        <a href="mailto:yourmail@email.com">✉️ Email</a>
-        <a href="https://github.com/quynhanh1222" target="_blank">💻 GitHub</a>
+      <div class="hero-avatar">
+        <!-- đổi avatar.jpg thành ảnh thật của bạn -->
+        <img src="avatar.jpg" alt="Quỳnh Anh">
       </div>
     </header>
 
     <!-- ABOUT -->
-    <section>
+    <section class="card">
       <h2>Xin chào</h2>
       <p>
         Tôi là sinh viên kinh tế với định hướng nghiên cứu và phân tích dữ liệu.
@@ -40,17 +47,19 @@
     </section>
 
     <!-- INTERESTS -->
-    <section>
+    <section class="card">
       <h2>🔍 Lĩnh vực quan tâm</h2>
-      <ul>
-        <li><strong>Kinh tế vĩ mô</strong> – Chính sách tiền tệ, lạm phát và tăng trưởng kinh tế</li>
-        <li><strong>Kinh tế lượng</strong> – Hồi quy, dữ liệu bảng, phân tích nhân quả</li>
-        <li><strong>Phân tích dữ liệu</strong> – Ứng dụng Stata và Python trong nghiên cứu kinh tế</li>
-      </ul>
+      <div class="tags">
+        <span>Kinh tế vĩ mô</span>
+        <span>Kinh tế lượng</span>
+        <span>Phân tích dữ liệu</span>
+        <span>Chính sách tiền tệ</span>
+        <span>Python · Stata</span>
+      </div>
     </section>
 
     <!-- EDUCATION -->
-    <section>
+    <section class="card">
       <h2>🎓 Học vấn</h2>
       <ul>
         <li><strong>Cử nhân Kinh tế Quốc tế</strong> – Đại học Ngoại Thương (FTU)</li>
@@ -59,19 +68,25 @@
     </section>
 
     <!-- PROJECTS -->
-    <section>
+    <section class="card">
       <h2>🚀 Dự án & Nghiên cứu</h2>
 
-      <div class="project">
-        <strong>HourSkill Platform</strong> – Dự án  
-        <br>
-        Xây dựng nền tảng kết nối kỹ năng và học tập.
-      </div>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>HourSkill Platform</h3>
+          <p>
+            Xây dựng nền tảng kết nối kỹ năng và học tập trong hệ sinh thái giáo dục.
+          </p>
+          <div class="project-tags">EdTech · Product · Research</div>
+        </div>
 
-      <div class="project">
-        <strong>Nghiên cứu lạm phát & đầu tư tư nhân</strong>  
-        <br>
-        Phân tích tác động của chính sách tiền tệ tới hành vi đầu tư.
+        <div class="project-card">
+          <h3>Lạm phát & Đầu tư tư nhân</h3>
+          <p>
+            Phân tích tác động của chính sách tiền tệ tới hành vi đầu tư tại Việt Nam.
+          </p>
+          <div class="project-tags">Kinh tế lượng · Dữ liệu · Phân tích</div>
+        </div>
       </div>
     </section>
 
